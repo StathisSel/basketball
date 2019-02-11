@@ -31,7 +31,6 @@ class AppController
             if (file_exists($view)) {
 
                 extract($variables);
-
                 ob_start();
                 include $view;
                 $output = ob_get_clean();

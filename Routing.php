@@ -2,7 +2,7 @@
 
 require_once 'controllers/DefaultController.php';
 require_once 'controllers/UploadController.php';
-require_once 'controllers/PlayerController.php';
+require_once 'controllers/PlayersListController.php';
 require_once 'controllers/AdminController.php';
 require_once 'controllers/AdminController.php';
 require_once 'controllers/BasketballTeamController.php';
@@ -26,14 +26,6 @@ class Routing
                 'controller' => 'DefaultController',
                 'action' => 'logout'
             ],
-            'upload' => [
-                'controller' => 'UploadController',
-                'action' => 'upload'
-            ],
-            'player' => [
-                'controller' => 'PlayerController',
-                'action' => 'player'
-            ],
             'admin' => [
                 'controller' => 'AdminController',
                 'action' => 'index'
@@ -49,6 +41,19 @@ class Routing
             'basketball_team' => [
                 'controller' => 'BasketballTeamController',
                 'action' => 'index'
+            ],
+            'players' => [
+                'controller' => 'PlayersListController',
+                'action' => 'players'
+            ],
+            'agh' => [
+                'controller' => 'PlayersListController',
+                'action' => 'agh'
+            ]
+            ,
+            'register' => [
+                'controller' => 'DefaultController',
+                'action' => 'register'
             ]
         ];
     }

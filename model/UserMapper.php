@@ -12,16 +12,35 @@ class UserMapper
         $this->database = new Database();
     }
 
+
+    public function addUser(
+        string $name, string $surname, string $email, string $password
+    ) {
+        try {
+            $stmt = $this->database->connect()->prepare('INSERT INTO Users (email, password, name, surname, id_role) VALUES (:email, :password, :name, :surname, 2);');
+            $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+            $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+            $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+            $stmt->bindParam(':surname', $surname, PDO::PARAM_STR);
+            $stmt->execute();
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            return 'User registered!';
+        }
+        catch(PDOException $e) {
+            return 'Error: ' . $e->getMessage();
+        }
+    }
+
     public function getUser(string $email):User {
         try {
-            $stmt = $this->database->connect()->prepare('SELECT * FROM Users WHERE email = :email;');
+            $stmt = $this->database->connect()->prepare('SELECT * FROM Users INNER JOIN Role WHERE email = :email;');
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
             $stmt->execute();
 
 
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
             //return new User($user['name'], $user['surname'], $user['email'], $user['password']);
-            return new User($user['name'], $user['surname'], $user['email'], $user['password']);
+            return new User($user['name'], $user['surname'], $user['email'], $user['password'],$user['role']);
         }
         catch(PDOException $e) {
             return 'Error: ' . $e->getMessage();
