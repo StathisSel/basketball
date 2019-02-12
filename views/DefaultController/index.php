@@ -31,6 +31,7 @@
                 <th>Games Lost</th>
                 <th>Points Scored</th>
                 <th>Points Lost</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>

@@ -9,8 +9,10 @@
 
 
 
-    <h1 class="col-12 pl-0" style="margin-left: 450px">AZS UJ</h1>
-    <button class="btn btn-dark btn-lg"  type="button"  style="margin: auto; margin-right: 1px;" onclick="getPlayers()">Get All Players</button>
+    <h1 class="col-12 pl-0" style="margin-left: 460px">AZS UJ</h1>
+    <h1 class="col-12 pl-0" style="margin-left: 310px">Coach: <?= $coach1->getName();?> <?= $coach1->getSurname();?></h1>
+
+
 
     <div class="row">
         <table class="table table-hover">
@@ -112,6 +114,7 @@
             <tbody class="teams-list">
             </tbody>
         </table>
+        <button class="btn btn-dark btn-lg"  type="button"  style="margin: auto; margin-right: 1px;" onclick="getPlayers()">Get ajax Players</button>
     </div>
 </div>
 
