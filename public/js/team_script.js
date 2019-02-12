@@ -1,48 +1,27 @@
-$(document).ready(function(){
+$(document).ready(function() {
     $('.panel-header').html('SIGN IN');
 });
 
-
-function getTeams() {
+function getPlayers() {
     const apiUrl = "http://localhost:8002";
     const $list = $('.teams-list');
 
     $.ajax({
-        url : apiUrl + '/?page=teams',
-        dataType : 'json'
+        url: apiUrl + '/?page=agh',
+        dataType: 'json'
     })
         .done((res) => {
-
-            $list.empty();
-            res.forEach(el => {
+        res.forEach(el => {
                 $list.append(`<tr>
-                    <td>${el.name}</td>
-                    <td>
-                    <button class="btn btn-danger" type="button" onclick="deleteTeam(${el.id})">
-                        <i class="material-icons">delete_forever</i>
-                    </button>
-                    </td>
+                    <td>${el.name} </td>
+                    <td><${el.surname} </td>
+                    <td><?= $player->getSurname(); ?> </td>
+                    <td><?= $player->getGamesPlayed(); ?> </td>
+                    <td><?= $player->getPointsScored(); ?> </td>
+                    <td><?= $player->getAssists(); ?> </td>
+                    <td><?= $player->getRebounds(); ?> </td>
+                    <td><?= $player->getSteals(); ?> </td>
                     </tr>`);
-            })
-        });
-}
-
-function deleteTeam(id) {
-    if (!confirm('Do you want to delete this team?')) {
-        return;
-    }
-
-    const apiUrl = "http://localhost:8002";
-
-    $.ajax({
-        url : apiUrl + '/?page=admin_delete_team',
-        method : "POST",
-        data : {
-            id : id
-        },
-        success: function() {
-            alert('Selected team successfully deleted from database!');
-            getTeams();
-        }
-    });
+        })
+    ;
 }

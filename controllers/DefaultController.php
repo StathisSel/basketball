@@ -24,7 +24,7 @@ class DefaultController extends AppController
 
     public function index(): void
     {
-        var_dump($_SESSION);
+        //var_dump($_SESSION);
         if(isset($_SESSION['id'])) {
             $team = new TeamMapper();
             $this->render('index', ['team' => $team->getTeam(10),'team1' => $team->getTeam(11),'team2' => $team->getTeam(12),'team3' => $team->getTeam(13),'team4' => $team->getTeam(14),'team5' => $team->getTeam(15),'team6' => $team->getTeam(16)]);

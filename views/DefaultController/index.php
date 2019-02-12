@@ -34,7 +34,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr onclick="window.location.href = 'http://localhost:8002/?page=uj'";>
                 <td><?= 1; ?> </td>
                 <td ><?= $team->getName(); ?> </td>
                 <td><?= $team->getPoints(); ?></td>
@@ -44,7 +44,7 @@
                 <td><?= $team->getPointsScored(); ?></td>
                 <td><?= $team->getPointsLost(); ?></td>
             </tr>
-            <tr>
+            <tr onclick="window.location.href = 'http://localhost:8002/?page=pk'";>
                 <td><?= 2; ?> </td>
                 <td ><?= $team1->getName(); ?> </td>
                 <td><?= $team1->getPoints(); ?></td>
@@ -64,7 +64,7 @@
                 <td><?= $team2->getPointsScored(); ?></td>
                 <td><?= $team2->getPointsLost(); ?></td>
             </tr>
-            <tr>
+            <tr onclick="window.location.href = 'http://localhost:8002/?page=ur'";>
                 <td><?=4; ?> </td>
                 <td><?= $team3->getName(); ?> </td>
                 <td><?= $team3->getPoints(); ?></td>
@@ -74,7 +74,7 @@
                 <td><?= $team3->getPointsScored(); ?></td>
                 <td><?= $team3->getPointsLost(); ?></td>
             </tr>
-            <tr>
+            <tr onclick="window.location.href = 'http://localhost:8002/?page=up'";>
                 <td><?=5; ?> </td>
                 <td><?= $team4->getName(); ?> </td>
                 <td><?= $team4->getPoints(); ?></td>
@@ -84,7 +84,7 @@
                 <td><?= $team4->getPointsScored(); ?></td>
                 <td><?= $team4->getPointsLost(); ?></td>
             </tr>
-            <tr>
+            <tr onclick="window.location.href = 'http://localhost:8002/?page=uek'";>
                 <td><?=6; ?> </td>
                 <td><?= $team5->getName(); ?> </td>
                 <td><?= $team5->getPoints(); ?></td>
@@ -94,7 +94,7 @@
                 <td><?= $team5->getPointsScored(); ?></td>
                 <td><?= $team5->getPointsLost(); ?></td>
             </tr>
-            <tr>
+            <tr onclick="window.location.href = 'http://localhost:8002/?page=ka'";>
                 <td><?=7; ?> </td>
                 <td><?= $team6->getName(); ?> </td>
                 <td><?= $team6->getPoints(); ?></td>

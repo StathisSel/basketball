@@ -10,6 +10,8 @@
 
 
     <h1 class="col-12 pl-0" style="margin-left: 450px">AZS AGH</h1>
+    <button class="btn btn-dark btn-lg"  type="button"  style="margin: auto; margin-right: 1px;" onclick="getPlayers()">Get All Players</button>
+
     <div class="row">
         <table class="table table-hover">
             <thead>
@@ -54,6 +56,56 @@
                 <td><?= $player3->getAssists(); ?> </td>
                 <td><?= $player3->getRebounds(); ?> </td>
                 <td><?= $player3->getSteals(); ?> </td>
+            </tr>
+            <tr>
+                <td><?= 4; ?> </td>
+                <td><?= $player4->getName(); ?> </td>
+                <td><?= $player4->getSurname(); ?> </td>
+                <td><?= $player4->getGamesPlayed(); ?> </td>
+                <td><?= $player4->getPointsScored(); ?> </td>
+                <td><?= $player4->getAssists(); ?> </td>
+                <td><?= $player4->getRebounds(); ?> </td>
+                <td><?= $player4->getSteals(); ?> </td>
+            </tr>
+            <tr>
+                <td><?= 5; ?> </td>
+                <td><?= $player5->getName(); ?> </td>
+                <td><?= $player5->getSurname(); ?> </td>
+                <td><?= $player5->getGamesPlayed(); ?> </td>
+                <td><?= $player5->getPointsScored(); ?> </td>
+                <td><?= $player5->getAssists(); ?> </td>
+                <td><?= $player5->getRebounds(); ?> </td>
+                <td><?= $player5->getSteals(); ?> </td>
+            </tr>
+            <tr>
+                <td><?= 6; ?> </td>
+                <td><?= $player6->getName(); ?> </td>
+                <td><?= $player6->getSurname(); ?> </td>
+                <td><?= $player6->getGamesPlayed(); ?> </td>
+                <td><?= $player6->getPointsScored(); ?> </td>
+                <td><?= $player6->getAssists(); ?> </td>
+                <td><?= $player6->getRebounds(); ?> </td>
+                <td><?= $player6->getSteals(); ?> </td>
+            </tr>
+            <tr>
+                <td><?= 7; ?> </td>
+                <td><?= $player7->getName(); ?> </td>
+                <td><?= $player7->getSurname(); ?> </td>
+                <td><?= $player7->getGamesPlayed(); ?> </td>
+                <td><?= $player7->getPointsScored(); ?> </td>
+                <td><?= $player7->getAssists(); ?> </td>
+                <td><?= $player7->getRebounds(); ?> </td>
+                <td><?= $player7->getSteals(); ?> </td>
+            </tr>
+            <tr>
+                <td><?= 8; ?> </td>
+                <td><?= $player8->getName(); ?> </td>
+                <td><?= $player8->getSurname(); ?> </td>
+                <td><?= $player8->getGamesPlayed(); ?> </td>
+                <td><?= $player8->getPointsScored(); ?> </td>
+                <td><?= $player8->getAssists(); ?> </td>
+                <td><?= $player8->getRebounds(); ?> </td>
+                <td><?= $player8->getSteals(); ?> </td>
             </tr>
 
             </tbody>

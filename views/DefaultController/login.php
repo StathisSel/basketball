@@ -34,6 +34,7 @@
                     </div>
                 </div>
                 <input type="submit" value="Sign in" class="btn btn-primary btn-lg float-right" />
+                <button class="btn btn-dark btn-lg"  type="button"  style="margin: auto; margin-right: 1px;" onclick="window.location.href = 'http://localhost:8002/?page=register'">Register</button>
             </form>
         </div>
     </div>

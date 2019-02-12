@@ -49,8 +49,31 @@ class Routing
             'agh' => [
                 'controller' => 'PlayersListController',
                 'action' => 'agh'
-            ]
-            ,
+            ],
+            'uj' => [
+                'controller' => 'PlayersListController',
+                'action' => 'uj'
+            ],
+            'pk' => [
+                'controller' => 'PlayersListController',
+                'action' => 'pk'
+            ],
+            'ur' => [
+                'controller' => 'PlayersListController',
+                'action' => 'ur'
+            ],
+            'up' => [
+                'controller' => 'PlayersListController',
+                'action' => 'up'
+            ],
+            'uek' => [
+                'controller' => 'PlayersListController',
+                'action' => 'uek'
+            ],
+            'ka' => [
+                'controller' => 'PlayersListController',
+                'action' => 'ka'
+            ],
             'register' => [
                 'controller' => 'DefaultController',
                 'action' => 'register'
